@@ -1,6 +1,8 @@
 app/terraform.tfstate
 app/.terraform
 app/.terraform.lock.hcl
+app/terraform.tfstate.backup
 infrastructure/terraform.tfstate
 infrastructure/.terraform
 infrastructure/.terraform.lock.hcl
+infrastructure/terraform.tfstate.backup
