@@ -1,0 +1,6 @@
+app/terraform.tfstate
+app/.terraform
+app/.terraform.lock.hcl
+infrastructure/terraform.tfstate
+infrastructure/.terraform
+infrastructure/.terraform.lock.hcl
