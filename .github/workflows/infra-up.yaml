@@ -38,12 +38,15 @@ jobs:
       run: 'ls'
 
     - name: List contents of infrastructure directory
-      run: cd infrastructure && ls -la
+      run: cd infrastructure/infrastructure && ls -la
+
+    - name: go
+      run: 'cd infrastructure/infrastructure'
  
       
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
-      run: 'cd infrastructure && terraform init'
+      run: terraform init
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
