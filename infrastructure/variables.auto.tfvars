@@ -1,4 +1,5 @@
-gcp_credentials = "/home/binyamin/Credentials/bootcamp-project-gke-71790bb0b752.json"
+gcp_credentials = "/home/runner/work/Infrastructure-compound-interest/Infrastructure-compound-interest/gha-creds-8c4cc23f71963144.json" 
+# "/home/binyamin/Credentials/bootcamp-project-gke-71790bb0b752.json"
 gcp_project_id = "bootcamp-project-gke"
 gcp_region = "us-west1"
 gke_cluster_name = "binyamin-app"
