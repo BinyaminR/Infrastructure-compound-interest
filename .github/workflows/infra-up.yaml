@@ -6,7 +6,7 @@ on:
       - infra
 
 
-job:
+jobs:
   apply:
     runs-on: ubuntu-latest
 
