@@ -34,26 +34,22 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v2
 
-    - name: ls
-      : 'ls'
+    - name: go
+      run: 'cd infrastructure'
       
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
-      working-directory: infrastructure
 
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
-      working-directory: infrastructure
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -input=false
-      working-directory: infrastructure
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
-      working-directory: infrastructure
 
       
