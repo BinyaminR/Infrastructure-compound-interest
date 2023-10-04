@@ -1,15 +1,15 @@
 
 resource "helm_release" "prometheus" {
   #depends_on = [kubernetes_namespace.kube-namespace, time_sleep.wait_for_kubernetes]
-  name       = "prometheus"
-  repository = "https://prometheus-community.github.io/helm-charts"
-  chart      = "kube-prometheus-stack"
-  namespace  = "prometheus"
+  name             = "prometheus"
+  repository       = "https://prometheus-community.github.io/helm-charts"
+  chart            = "kube-prometheus-stack"
+  namespace        = "prometheus"
   create_namespace = true
-  version    = "45.7.1"
+  version          = "45.7.1"
 
- set {
-    name = "grafana.service.type"
+  set {
+    name  = "grafana.service.type"
     value = "LoadBalancer"
   }
 
@@ -17,10 +17,10 @@ resource "helm_release" "prometheus" {
   values = [
     file("kube-prometheus-stack-values.yaml")
   ]
-#   timeout = 2000
-  
+  #   timeout = 2000
 
-set {
+
+  set {
     name  = "podSecurityPolicy.enabled"
     value = true
   }
