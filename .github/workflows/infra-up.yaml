@@ -21,7 +21,7 @@ jobs:
     - name: Write GCP credentials to a file
       run: |
        cd infrastructure/infrastructure
-       echo "${{ secrets.GCP_CREDENTIALS }}" > gcp_creds.json
+       echo "${{ secrets.GCP_CREDENTIALS_KEY }}" > gcp_creds.json
 
     - name: Debug - Print GCP credentials
       run: |
