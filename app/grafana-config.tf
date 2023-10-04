@@ -3135,7 +3135,7 @@ resource "kubernetes_manifest" "configmap_prometheus_dashboards_k8s_addons_prome
       "labels" = {
         "grafana_dashboard" = "1"
       }
-      "name" = "dashboards-k8s-addons-prometheus"
+      "name"      = "dashboards-k8s-addons-prometheus"
       "namespace" = "prometheus"
     }
   }
@@ -5824,7 +5824,7 @@ resource "kubernetes_manifest" "configmap_prometheus_dashboards_k8s_addons_trivy
       "labels" = {
         "grafana_dashboard" = "1"
       }
-      "name" = "dashboards-k8s-addons-trivy-operator"
+      "name"      = "dashboards-k8s-addons-trivy-operator"
       "namespace" = "prometheus"
     }
   }
@@ -7181,7 +7181,7 @@ resource "kubernetes_manifest" "configmap_prometheus_dashboards_k8s_system_api_s
       "labels" = {
         "grafana_dashboard" = "1"
       }
-      "name" = "dashboards-k8s-system-api-server"
+      "name"      = "dashboards-k8s-system-api-server"
       "namespace" = "prometheus"
     }
   }
@@ -8761,7 +8761,7 @@ resource "kubernetes_manifest" "configmap_prometheus_dashboards_k8s_system_cored
       "labels" = {
         "grafana_dashboard" = "1"
       }
-      "name" = "dashboards-k8s-system-coredns"
+      "name"      = "dashboards-k8s-system-coredns"
       "namespace" = "prometheus"
     }
   }
@@ -11726,7 +11726,7 @@ resource "kubernetes_manifest" "configmap_prometheus_dashboards_k8s_views_global
       "labels" = {
         "grafana_dashboard" = "1"
       }
-      "name" = "dashboards-k8s-views-global"
+      "name"      = "dashboards-k8s-views-global"
       "namespace" = "prometheus"
     }
   }
@@ -14008,7 +14008,7 @@ resource "kubernetes_manifest" "configmap_prometheus_dashboards_k8s_views_namesp
       "labels" = {
         "grafana_dashboard" = "1"
       }
-      "name" = "dashboards-k8s-views-namespaces"
+      "name"      = "dashboards-k8s-views-namespaces"
       "namespace" = "prometheus"
     }
   }
@@ -17922,7 +17922,7 @@ resource "kubernetes_manifest" "configmap_prometheus_dashboards_k8s_views_nodes"
       "labels" = {
         "grafana_dashboard" = "1"
       }
-      "name" = "dashboards-k8s-views-nodes"
+      "name"      = "dashboards-k8s-views-nodes"
       "namespace" = "prometheus"
     }
   }
@@ -20538,7 +20538,7 @@ resource "kubernetes_manifest" "configmap_prometheus_dashboards_k8s_views_pods" 
       "labels" = {
         "grafana_dashboard" = "1"
       }
-      "name" = "dashboards-k8s-views-pods"
+      "name"      = "dashboards-k8s-views-pods"
       "namespace" = "prometheus"
     }
   }

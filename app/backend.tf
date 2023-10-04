@@ -1,6 +1,6 @@
 terraform {
- backend "gcs" {
-   bucket  = "compound-interest-app-binyamin"
-   prefix  = "terraform/state"
- }
+  backend "gcs" {
+    bucket = "compound-interest-app-binyamin"
+    prefix = "terraform/state"
+  }
 }

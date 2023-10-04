@@ -1,21 +1,21 @@
 provider "kubernetes" {
-  config_path    = "~/.kube/config"
-#   context        = "gke_bootcamp-project-gke_us-west1-a_binyamin-app"
+  config_path = "~/.kube/config"
+  #   context        = "gke_bootcamp-project-gke_us-west1-a_binyamin-app"
 }
 
 terraform {
   required_providers {
     argocd = {
-      source = "oboukili/argocd"
+      source  = "oboukili/argocd"
       version = "6.0.3"
     }
   }
- 
+
 }
 
 data "kubernetes_service" "argocd_server" {
   metadata {
-    name      = "argocd-server" 
+    name      = "argocd-server"
     namespace = "argocd"
   }
   # depends_on = [null_resource.get_gke_credentials]
