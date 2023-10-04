@@ -41,14 +41,11 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v2
 
-    - name: ls
-      run: 'ls'
-
     - name: List contents of infrastructure directory
       run: cd infrastructure/infrastructure && ls -la
 
     - name: Terraform up
-      run: 'cd infrastructure && ./terraform_commands.sh'
+      run: 'cd infrastructure/infrastructure && ./terraform_commands.sh'
 
     
 
