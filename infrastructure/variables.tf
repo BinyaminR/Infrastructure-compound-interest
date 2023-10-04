@@ -1,7 +1,7 @@
-# variable "gcp_credentials" {
-#     type = string
-#     description = "Location of service account for GCP"
-# }
+variable "gcp_credentials" {
+    type = string
+    description = "Location of service account for GCP"
+}
 
 variable "gcp_project_id" {
     type = string
