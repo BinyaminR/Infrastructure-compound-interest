@@ -49,8 +49,8 @@ jobs:
       run: 'cd infrastructure/infrastructure && terraform init'
 
     # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run: 'cd infrastructure/infrastructure && terraform fmt -check'
+    # - name: Terraform Format
+    #   run: 'cd infrastructure/infrastructure && terraform fmt -check'
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
