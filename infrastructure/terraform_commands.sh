@@ -3,9 +3,6 @@
 # Exit if any command fails
 set -e
 
-# Change to the correct directory
-cd infrastructure
-
 # Initialize Terraform
 echo "Initializing Terraform..."
 terraform init
