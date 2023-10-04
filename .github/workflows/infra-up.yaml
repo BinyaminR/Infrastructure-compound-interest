@@ -1,4 +1,4 @@
-name: Test
+name: Run Infrastructure
 
 on:
   push:
@@ -18,18 +18,12 @@ jobs:
       with:
        path: infrastructure
 
-    - name: Write GCP credentials to a file
-      run: |
-       cd infrastructure/infrastructure
-       echo "${{ secrets.GCP_CREDENTIALS_KEY }}" > gcp_creds.json
+    # - name: Write GCP credentials to a file
+    #   run: |
+    #    cd infrastructure/infrastructure
+    #    echo "${{ secrets.GCP_CREDENTIALS_KEY }}" > gcp_creds.json
 
-    - name: Debug - Print GCP credentials
-      run: |
-       cd infrastructure/infrastructure
-       cat gcp_creds.json
-
-
-
+  
     - name: Set GOOGLE_APPLICATION_CREDENTIALS env variable
       run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/gcp_creds.json" >> $GITHUB_ENV
 
@@ -44,8 +38,6 @@ jobs:
     - name: 'Use gcloud CLI'
       run: 'gcloud info'
 
-
-    # Install the latest version of Terraform CLI 
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v2
 
@@ -55,23 +47,9 @@ jobs:
     - name: List contents of infrastructure directory
       run: cd infrastructure/infrastructure && ls -la
 
-    - name: go
-      run: 'cd infrastructure/infrastructure'
- 
-      
-    # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
-    - name: Terraform Init
-      run: 'cd infrastructure/infrastructure && terraform init'
+    - name: Terraform up
+      run: 'cd infrastructure && ./terraform_commands.sh'
 
-    # Checks that all Terraform configuration files adhere to a canonical format
-    # - name: Terraform Format
-    #   run: 'cd infrastructure/infrastructure && terraform fmt -check'
-
-    # Generates an execution plan for Terraform
-    - name: Terraform Plan
-      run: 'cd infrastructure/infrastructure && terraform plan -input=false'
-
-    - name: Terraform Apply
-      run: 'cd infrastructure/infrastructure && terraform apply -auto-approve'
+    
 
       
