@@ -1,5 +1,6 @@
 provider "google" {
-  credentials = var.gcp_credentials
+  credentials =  file("${path.module}/gcp_creds.json")
+  # var.gcp_credentials
   project = var.gcp_project_id
   region = var.gcp_region
 }
