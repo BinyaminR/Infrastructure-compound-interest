@@ -23,7 +23,13 @@ jobs:
        cd infrastructure/infrastructure
        echo "${{ secrets.GCP_CREDENTIALS }}" > gcp_creds.json
 
-      
+    - name: Debug - Print GCP credentials
+      run: |
+       cd infrastructure/infrastructure
+       cat gcp_creds.json
+
+
+
     - name: Set GOOGLE_APPLICATION_CREDENTIALS env variable
       run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/gcp_creds.json" >> $GITHUB_ENV
 
