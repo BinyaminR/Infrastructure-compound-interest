@@ -37,11 +37,11 @@ jobs:
       run: 'ls'
 
     - name: List contents of infrastructure directory
-      run: cd app/app && ls -la
+      run: cd app && ls -la
 
       
     - name: Terraform up
-      run: 'cd app/app && ./terraform_commands/initiation.sh'
+      run: 'cd app && ./terraform_commands/initiation.sh'
 
     
       
