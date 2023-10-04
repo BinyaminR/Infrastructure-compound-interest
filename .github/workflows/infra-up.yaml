@@ -18,8 +18,11 @@ jobs:
       with:
        path: infrastructure
 
-    - name: Set up GCP credentials
-      run: echo "$GOOGLE_APPLICATION_CREDENTIALS_CONTENT" > gcp_creds.json
+    - name: Write GCP credentials to a file
+      run: |
+       cd infrastructure/infrastructure
+       echo "${{ secrets.GCP_CREDENTIALS }}" > gcp_creds.json
+
       
     - name: Set GOOGLE_APPLICATION_CREDENTIALS env variable
       run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/gcp_creds.json" >> $GITHUB_ENV
