@@ -16,9 +16,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-  
-    # - name: Set GOOGLE_APPLICATION_CREDENTIALS env variable
-    #   run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/gcp_creds.json" >> $GITHUB_ENV
+
 
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
