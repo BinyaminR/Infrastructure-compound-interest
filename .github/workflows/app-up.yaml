@@ -39,6 +39,9 @@ jobs:
     - name: List contents of infrastructure directory
       run: cd app && ls -la
 
+    - name: plugin
+      run:  'sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin'  
+
       
     - name: Terraform up
       run: 'cd app && ./terraform_commands/initiation.sh'
