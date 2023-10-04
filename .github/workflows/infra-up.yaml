@@ -9,15 +9,18 @@ on:
 jobs:
   apply:
     runs-on: ubuntu-latest
-
+    env:
+      GOOGLE_APPLICATION_CREDENTIALS_CONTENT: ${{ secrets.GCP_CREDENTIALS }}
     steps:
-
+    
     - name: Checkout
       uses: actions/checkout@v3
       with:
        path: infrastructure
 
-
+    - name: Set up GCP credentials
+      run: echo "$GOOGLE_APPLICATION_CREDENTIALS_CONTENT" > gcp_creds.json
+      
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
       with:
