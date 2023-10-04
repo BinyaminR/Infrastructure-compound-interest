@@ -1,4 +1,4 @@
-# gcp_credentials = env("GOOGLE_APPLICATION_CREDENTIALS")
+ gcp_credentials = file("${path.module}/gcp_creds.json")
 # "/home/binyamin/Credentials/bootcamp-project-gke-71790bb0b752.json"
 gcp_project_id = "bootcamp-project-gke"
 gcp_region = "us-west1"
