@@ -22,7 +22,7 @@ jobs:
       run: echo "$GOOGLE_APPLICATION_CREDENTIALS_CONTENT" > gcp_creds.json
       
     - name: Set GCP credentials as an environment variable
-      run: echo "TF_VAR_gcp_credentials=$(echo '${{ secrets.GCP_CREDENTIALS }}')" >> $GITHUB_ENV
+      run: echo "TF_VAR_gcp_credentials=$(echo '${{ GOOGLE_APPLICATION_CREDENTIALS_CONTENT }}')" >> $GITHUB_ENV
   
     - id: 'auth'
       uses: 'google-github-actions/auth@v1'
