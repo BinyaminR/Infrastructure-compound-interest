@@ -1,12 +1,13 @@
+
 # Infrastructure-compound-interest
 
 This repository contains the infrastructure as code (IaC) configurations for the DevOps application, which is a part of a larger ecosystem composed of three repositories:
 
 **Application**: [Application Repo](https://github.com/BinyaminR/Application-compound-interest)
 
- **GitOps** : [GitOps Repo](https://github.com/BinyaminR/Gitops-compound-interest)
+**GitOps**: [GitOps Repo](https://github.com/BinyaminR/Gitops-compound-interest)
  
- **Infrastructure** (Current repository): [Infrastructure Repo](https://github.com/BinyaminR/Infrastructure-compound-interest)
+**Infrastructure** (Current repository): [Infrastructure Repo](https://github.com/BinyaminR/Infrastructure-compound-interest)
 
 ## Overview
 
@@ -36,3 +37,4 @@ The approach for provisioning infrastructure involves several steps:
 
 5. **Configuration Management**: The configuration for each component is managed as code, ensuring that the configuration is documented, version-controlled, and can be reproduced at any time.
 
+For more detailed information on our CI/CD workflows and configurations, please refer to our [Workflow README](https://github.com/BinyaminR/Infrastructure-compound-interest/tree/main/.github/workflows/README.md).
