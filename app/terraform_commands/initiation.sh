@@ -23,12 +23,18 @@ print_step "Step 1: Getting GKE credentials..."
 gcloud container clusters get-credentials binyamin-app --zone us-west1-a --project bootcamp-project-gke
 check_success "retrieve GKE credentials"
 
-# Step 2: Run Terraform
+# Step 2: Run Terraform Initialization
 print_step "Step 2: Initializing Terraform..."
 terraform init
 check_success "initialize Terraform"
 
-print_step "Applying Terraform configurations..."
+# Step 3: Plan Terraform Configurations
+print_step "Step 3: Planning Terraform configurations..."
+terraform plan
+check_success "plan Terraform configurations"
+
+# Step 4: Apply Terraform Configurations
+print_step "Step 4: Applying Terraform configurations..."
 terraform apply -auto-approve
 check_success "apply Terraform configurations"
 

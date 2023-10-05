@@ -1,8 +1,8 @@
 resource "argocd_application" "compound_interest" {
   metadata {
-    name      = var.app_name
+    name = var.app_name
     # If you need to specify namespace or other metadata attributes, add them here.
-   
+
   }
 
   spec {
